@@ -2,6 +2,9 @@
 #install.packages("RSQLite")
 #install.packages("rtweet")
 #install.packages ("sqldf")
+#install.packages ("pacman")
+#install.packages ("dplyr")
+
 
 #Setting Working Directory
 setwd = ("/Users/kashs/Desktop/AKash_R/Get_Data.R")
