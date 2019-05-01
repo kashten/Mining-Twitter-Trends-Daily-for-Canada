@@ -50,6 +50,6 @@ db <- dbConnect(SQLite(), dbname="Twitter_Trends_Canada.sqlite")
 dbWriteTable(con=db, name = "Canada_DB", canada_grouped, overwrite= T, row.names = FALSE)
 dbListTables(db)
 
-#Query - Show all records from the DB where city code is 4118. 
-dbGetQuery (con=db, "SELECT  name,trend_date, popularity FROM Canada_DB WHERE trend_date < '2019-05-01' LIMIT 100")
+#Query - Show 10 records from the DB (datewise) 
+dbGetQuery (con=db, "SELECT  name,trend_date, popularity FROM Canada_DB WHERE trend_date < '2019-05-01' LIMIT 10")
 dbDisconnect(db)
